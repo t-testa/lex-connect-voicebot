@@ -1,0 +1,845 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "cb970c8b-c55e-456d-b058-145235e752ce",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "ID check stub": {
+        "position": {
+          "x": 1204.8,
+          "y": 229.6
+        },
+        "isFriendlyName": true,
+        "conditionMetadata": [],
+        "countryCodePrefix": "+1"
+      },
+      "a66354dd-d6a1-4395-a0f7-31070de80d9d": {
+        "position": {
+          "x": 984.8,
+          "y": 364.8
+        }
+      },
+      "Reset response": {
+        "position": {
+          "x": 1857.6,
+          "y": -45.6
+        },
+        "isFriendlyName": true
+      },
+      "Hours response": {
+        "position": {
+          "x": 2150.4,
+          "y": 136
+        },
+        "isFriendlyName": true
+      },
+      "7a475709-096a-483a-8543-e00c961b8f3c": {
+        "position": {
+          "x": 1171.2,
+          "y": 648
+        }
+      },
+      "e2f7c13c-568d-48dd-93de-1f5011d281e3": {
+        "position": {
+          "x": 2171.2,
+          "y": 567.2
+        }
+      },
+      "cb970c8b-c55e-456d-b058-145235e752ce": {
+        "position": {
+          "x": -135.2,
+          "y": -124
+        }
+      },
+      "73ce87a6-f16a-4038-8ccc-cd12d404e267": {
+        "position": {
+          "x": 923.2,
+          "y": -32
+        }
+      },
+      "Confidence check - Reset": {
+        "position": {
+          "x": 1438.4,
+          "y": 517.6
+        },
+        "isFriendlyName": true,
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "852cea4e-5f88-43d1-a860-9a3931aef3fe",
+            "operator": {
+              "name": "Is greater or equal",
+              "value": "GreaterThanOrEqualTo",
+              "shortDisplay": ">="
+            },
+            "value": "0.6"
+          }
+        ]
+      },
+      "Confidence check - CheckBalance": {
+        "position": {
+          "x": 636,
+          "y": 342.4
+        },
+        "isFriendlyName": true,
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "700b12ca-ced5-4de9-b87b-e4eb3edb0a55",
+            "operator": {
+              "name": "Is greater or equal",
+              "value": "GreaterThanOrEqualTo",
+              "shortDisplay": ">="
+            },
+            "value": "0.6"
+          }
+        ]
+      },
+      "Confidence check - Hours": {
+        "position": {
+          "x": 1856.8,
+          "y": 524.8
+        },
+        "isFriendlyName": true,
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "e8279b9e-a1d6-49b0-949f-17ba624a3dff",
+            "operator": {
+              "name": "Is greater or equal",
+              "value": "GreaterThanOrEqualTo",
+              "shortDisplay": ">="
+            },
+            "value": "0.6"
+          }
+        ]
+      },
+      "a8e80668-1cab-48f6-9fd2-e0ddb2561256": {
+        "position": {
+          "x": 181.6,
+          "y": -78.4
+        },
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "live",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "BankingFrontDoor"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "BankingFrontDoor",
+        "lexV2BotAliasName": "live",
+        "conditionMetadata": [
+          {
+            "id": "5017e5ef-fb64-4f94-b940-d667521da548",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "CheckBalance"
+          },
+          {
+            "id": "e43d0a76-581d-4440-885c-726bbca75507",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "ResetOnlineBanking"
+          },
+          {
+            "id": "4c26865c-3bc3-42e6-a655-dfc76f38d3a9",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "BranchHours"
+          },
+          {
+            "id": "d4f72342-a2a3-45df-bbb8-7b80b132934f",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "ReportLostCard"
+          },
+          {
+            "id": "a52bd5a6-165c-4532-af11-d88b8c3f9157",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "DisputeTransaction"
+          },
+          {
+            "id": "3d9b393b-2321-4d19-9453-6a933d527698",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "SpeakToAgent"
+          }
+        ]
+      },
+      "Reprompt menu": {
+        "position": {
+          "x": -88,
+          "y": 190.4
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "live",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "BankingFrontDoor"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "BankingFrontDoor",
+        "lexV2BotAliasName": "live",
+        "conditionMetadata": [
+          {
+            "id": "6f39102f-646d-473d-bd25-07d16906fe12",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "CheckBalance"
+          },
+          {
+            "id": "50d3350c-c1ee-410f-aec5-5e9c9c8c543c",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "ResetOnlineBanking"
+          },
+          {
+            "id": "21cddff5-76c0-4450-b9f1-c7352642eacd",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "BranchHours"
+          },
+          {
+            "id": "7a189de9-6fee-41c5-81f2-95f08e2d754a",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "ReportLostCard"
+          },
+          {
+            "id": "26ae4bc3-2b2a-43ca-820b-61f0b0b75927",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "DisputeTransaction"
+          },
+          {
+            "id": "bb79dc5c-ea0c-4d45-931c-cdc803768e07",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "SpeakToAgent"
+          }
+        ]
+      },
+      "Reason - low confidence": {
+        "position": {
+          "x": 1400.8,
+          "y": -109.6
+        },
+        "isFriendlyName": true,
+        "dynamicParams": []
+      },
+      "366b5290-57cb-4d8f-8e7e-800b7f88af80": {
+        "position": {
+          "x": 700.8,
+          "y": 674.4
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "BasicQueue"
+          }
+        },
+        "queue": {
+          "text": "BasicQueue"
+        }
+      },
+      "Balance response": {
+        "position": {
+          "x": 1600,
+          "y": 218.4
+        },
+        "isFriendlyName": true
+      },
+      "Reason - routed": {
+        "position": {
+          "x": 634.4,
+          "y": -87.2
+        },
+        "isFriendlyName": true,
+        "dynamicParams": []
+      },
+      "Reason - fallback": {
+        "position": {
+          "x": 171.2,
+          "y": 523.2
+        },
+        "isFriendlyName": true,
+        "dynamicParams": []
+      },
+      "Lex details": {
+        "position": {
+          "x": 421.6,
+          "y": 645.6
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "Attributes": {
+            "intent": {
+              "useDynamic": true
+            },
+            "confidence": {
+              "useDynamic": true
+            },
+            "accountype": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "intent",
+          "confidence",
+          "accountype"
+        ]
+      },
+      "Connecting message": {
+        "position": {
+          "x": 121.6,
+          "y": 823.2
+        },
+        "isFriendlyName": true
+      }
+    },
+    "Annotations": [],
+    "name": "BankingFrontDoor IVR",
+    "description": "",
+    "type": "contactFlow",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "5",
+        "Text": "For security, please enter the last four digits of your card.",
+        "DTMFConfiguration": {
+          "DisableCancelKey": "False",
+          "InterdigitTimeLimitSeconds": "5"
+        },
+        "InputValidation": {
+          "CustomValidation": {
+            "MaximumLength": "4"
+          }
+        }
+      },
+      "Identifier": "ID check stub",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "Balance response",
+        "Errors": [
+          {
+            "NextAction": "Reason - low confidence",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "a66354dd-d6a1-4395-a0f7-31070de80d9d",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "7a475709-096a-483a-8543-e00c961b8f3c",
+        "Errors": [
+          {
+            "NextAction": "7a475709-096a-483a-8543-e00c961b8f3c",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "7a475709-096a-483a-8543-e00c961b8f3c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "To reset your online banking password, open the Demo Bank app and tap Forgot password. You'll get a code by text message. Thank you for calling."
+      },
+      "Identifier": "Reset response",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "e2f7c13c-568d-48dd-93de-1f5011d281e3",
+        "Errors": [
+          {
+            "NextAction": "e2f7c13c-568d-48dd-93de-1f5011d281e3",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Our branches are open Monday to Friday from 9 AM to 5 PM, and Saturday from 9 AM to 1 PM. Thank you for calling."
+      },
+      "Identifier": "Hours response",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "e2f7c13c-568d-48dd-93de-1f5011d281e3",
+        "Errors": [
+          {
+            "NextAction": "e2f7c13c-568d-48dd-93de-1f5011d281e3",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Sorry, we can't take your call right now. Please try again later."
+      },
+      "Identifier": "7a475709-096a-483a-8543-e00c961b8f3c",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "e2f7c13c-568d-48dd-93de-1f5011d281e3",
+        "Errors": [
+          {
+            "NextAction": "e2f7c13c-568d-48dd-93de-1f5011d281e3",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "e2f7c13c-568d-48dd-93de-1f5011d281e3",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "cb970c8b-c55e-456d-b058-145235e752ce",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "a8e80668-1cab-48f6-9fd2-e0ddb2561256"
+      }
+    },
+    {
+      "Parameters": {
+        "QueuePriority": "1"
+      },
+      "Identifier": "73ce87a6-f16a-4038-8ccc-cd12d404e267",
+      "Type": "UpdateContactRoutingBehavior",
+      "Transitions": {
+        "NextAction": "Reason - routed"
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Lex.IntentConfidence.Score"
+      },
+      "Identifier": "Confidence check - Reset",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "Reason - low confidence",
+        "Conditions": [
+          {
+            "NextAction": "Reset response",
+            "Condition": {
+              "Operator": "NumberGreaterOrEqualTo",
+              "Operands": [
+                "0.6"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Reason - low confidence",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Lex.IntentConfidence.Score"
+      },
+      "Identifier": "Confidence check - CheckBalance",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "Reason - low confidence",
+        "Conditions": [
+          {
+            "NextAction": "ID check stub",
+            "Condition": {
+              "Operator": "NumberGreaterOrEqualTo",
+              "Operands": [
+                "0.6"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Reason - low confidence",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Lex.IntentConfidence.Score"
+      },
+      "Identifier": "Confidence check - Hours",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "Reason - low confidence",
+        "Conditions": [
+          {
+            "NextAction": "Hours response",
+            "Condition": {
+              "Operator": "NumberGreaterOrEqualTo",
+              "Operands": [
+                "0.6"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Reason - low confidence",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Welcome to Demo Bank. In a few words, how can I help? For example, check a balance or report a lost card.",
+        "LexV2Bot": {
+          "AliasArn": "<LEX_BOT_ALIAS_ARN>"
+        }
+      },
+      "Identifier": "a8e80668-1cab-48f6-9fd2-e0ddb2561256",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "Reason - fallback",
+        "Conditions": [
+          {
+            "NextAction": "Confidence check - CheckBalance",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "CheckBalance"
+              ]
+            }
+          },
+          {
+            "NextAction": "Confidence check - Reset",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ResetOnlineBanking"
+              ]
+            }
+          },
+          {
+            "NextAction": "Confidence check - Hours",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "BranchHours"
+              ]
+            }
+          },
+          {
+            "NextAction": "73ce87a6-f16a-4038-8ccc-cd12d404e267",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ReportLostCard"
+              ]
+            }
+          },
+          {
+            "NextAction": "Reason - routed",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DisputeTransaction"
+              ]
+            }
+          },
+          {
+            "NextAction": "Reason - routed",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "SpeakToAgent"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Reprompt menu",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "Reason - fallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Sorry, I didn't catch that. I can help with checking a balance, resetting online banking, branch hours, a lost card, or a charge you don't recognize. What do you need?",
+        "LexV2Bot": {
+          "AliasArn": "<LEX_BOT_ALIAS_ARN>"
+        }
+      },
+      "Identifier": "Reprompt menu",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "Reason - fallback",
+        "Conditions": [
+          {
+            "NextAction": "Confidence check - CheckBalance",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "CheckBalance"
+              ]
+            }
+          },
+          {
+            "NextAction": "Confidence check - Reset",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ResetOnlineBanking"
+              ]
+            }
+          },
+          {
+            "NextAction": "Confidence check - Hours",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "BranchHours"
+              ]
+            }
+          },
+          {
+            "NextAction": "73ce87a6-f16a-4038-8ccc-cd12d404e267",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ReportLostCard"
+              ]
+            }
+          },
+          {
+            "NextAction": "Reason - routed",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DisputeTransaction"
+              ]
+            }
+          },
+          {
+            "NextAction": "Reason - routed",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "SpeakToAgent"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Reason - fallback",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "Reason - fallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "handoffreason": "low_confidence"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Reason - low confidence",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Lex details",
+        "Errors": [
+          {
+            "NextAction": "Lex details",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "<CONNECT_QUEUE_ARN>"
+      },
+      "Identifier": "366b5290-57cb-4d8f-8e7e-800b7f88af80",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "a66354dd-d6a1-4395-a0f7-31070de80d9d",
+        "Errors": [
+          {
+            "NextAction": "7a475709-096a-483a-8543-e00c961b8f3c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Your $.Lex.Slots.AccountType balance is $2,450.18. Thank you for calling Demo Bank."
+      },
+      "Identifier": "Balance response",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "e2f7c13c-568d-48dd-93de-1f5011d281e3",
+        "Errors": [
+          {
+            "NextAction": "Lex details",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "handoffreason": "routed"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Reason - routed",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Lex details",
+        "Errors": [
+          {
+            "NextAction": "366b5290-57cb-4d8f-8e7e-800b7f88af80",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "handoffreason": "fallback"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Reason - fallback",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Lex details",
+        "Errors": [
+          {
+            "NextAction": "Lex details",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "intent": "$.Lex.IntentName",
+          "confidence": "$.Lex.IntentConfidence.Score",
+          "accountype": "$.Lex.Slots.AccountType"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Lex details",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Connecting message",
+        "Errors": [
+          {
+            "NextAction": "Connecting message",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Let me connect you with an agent who can help. One moment please."
+      },
+      "Identifier": "Connecting message",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "366b5290-57cb-4d8f-8e7e-800b7f88af80",
+        "Errors": [
+          {
+            "NextAction": "366b5290-57cb-4d8f-8e7e-800b7f88af80",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}
